@@ -35,8 +35,10 @@ h3 {
     pointer-events: none;
     border-radius: 50%;
     transition: 0.1s;
+    display: none;
 }
 .cursor2{
+    display: none;
     position: fixed;
     left: 0;
     top: 0;

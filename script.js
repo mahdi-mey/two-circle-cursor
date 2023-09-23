@@ -2,7 +2,7 @@ let cursor = document.querySelector('.cursor')
 let cursor2 = document.querySelector('.cursor2')
 
 document.addEventListener('mousemove', e => {
-    
+
     cursor.style.display = 'block'
     cursor2.style.display = 'block'
 
@@ -12,5 +12,6 @@ document.addEventListener('mousemove', e => {
     cursor2.style.top = `${e.clientY}px`
 })
 document.addEventListener('mouseleave', () => {
-
+    cursor.style.display = 'none'
+    cursor2.style.display = 'none'
 })

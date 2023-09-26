@@ -1,6 +1,7 @@
 let cursor = document.querySelector('.cursor')
 let cursor2 = document.querySelector('.cursor2')
 
+// mouse move on document function
 document.addEventListener('mousemove', e => {
 
     cursor.style.display = 'block'
@@ -11,6 +12,7 @@ document.addEventListener('mousemove', e => {
     cursor2.style.left = `${e.clientX}px`
     cursor2.style.top = `${e.clientY}px`
 })
+// delets cursor when mouse leaves
 document.addEventListener('mouseleave', () => {
     cursor.style.display = 'none'
     cursor2.style.display = 'none'

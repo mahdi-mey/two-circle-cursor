@@ -1,17 +1,21 @@
 let cursor = document.querySelector('.cursor')
 let cursor2 = document.querySelector('.cursor2')
 
-// mouse move on document function
-document.addEventListener('mousemove', e => {
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 
-    cursor.style.display = 'block'
-    cursor2.style.display = 'block'
+if(!isTouchDevice){
+    // mouse move on document function
+    document.addEventListener('mousemove', e => {
 
-    cursor.style.left = `${e.clientX}px`
-    cursor.style.top = `${e.clientY}px`
-    cursor2.style.left = `${e.clientX}px`
-    cursor2.style.top = `${e.clientY}px`
-})
+        cursor.style.display = 'block'
+        cursor2.style.display = 'block'
+
+        cursor.style.left = `${e.clientX}px`
+        cursor.style.top = `${e.clientY}px`
+        cursor2.style.left = `${e.clientX}px`
+        cursor2.style.top = `${e.clientY}px`
+    })
+}
 // delets cursor when mouse leaves
 document.addEventListener('mouseleave', () => {
     cursor.style.display = 'none'
